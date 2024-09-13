@@ -30,14 +30,10 @@ int main ()  {
             printf("Error opening file!\n");
            return 1;
 	}
-	if (det==0)  {
-		fprintf(file,"collinear");
-		return 0;
-	}
-	else {
-		fprintf(file,"Not collinear");
-		return 0;
-        }
+	fprintf(file,"X Y\n");
+	fprintf(file,"%.2lf %.2lf\n",A[0][0],A[1][0]);
+	fprintf(file,"%.2lf %.2lf\n",B[0][0],B[1][0]);
+	fprintf(file,"%.2lf %.2lf\n",C[0][0],C[1][0]);
 	fclose(file);
 	freeMat(A,2);
 	freeMat(B,2);

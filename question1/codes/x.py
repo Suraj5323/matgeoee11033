@@ -19,9 +19,12 @@ from conics.funcs import circ_gen
 
 #Direction vector
 #Given points
-A = np.array(([[-4], [6]])).reshape(-1,1) 
-B = np.array(([[-4], [-6]])).reshape(-1,1) 
-C = np.array(([[-4], [2]])).reshape(-1,1) 
+data = np.genfromtxt('output.dat', delimiter=' ', names=True)
+x = data['X']
+y = data['Y']
+A = np.array(([x[0], y[0]])).reshape(-1,1) 
+B = np.array(([x[1], y[1]])).reshape(-1,1) 
+C = np.array(([x[2], y[2]])).reshape(-1,1) 
 
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
