@@ -18,16 +18,12 @@ plt.figure()
 # Plot the line segment from A to B
 plt.plot([A[0], B[0]], [A[1], B[1]], label='Line Segment AB', color='blue')
 
-# Plot the points from values.dat
-plt.scatter(x_values, y_values, color='red', label='Points from values.dat')
+# Plot the points from values.dat using plt.plot
+plt.plot(x_values, y_values, 'ro', label='Points from values.dat')
 
-# Label the points for clarity
-for i in range(len(x_values)):
-    plt.annotate(f'({x_values[i]:.2f}, {y_values[i]:.2f})',
-                 (x_values[i], y_values[i]),
-                 textcoords="offset points", 
-                 xytext=(0, 10), 
-                 ha='center')
+# Annotate points A and B with their coordinates
+plt.annotate(f'A ({A[0]}, {A[1]})', A, textcoords="offset points", xytext=(0,10), ha='center', color='blue')
+plt.annotate(f'B ({B[0]}, {B[1]})', B, textcoords="offset points", xytext=(0,-15), ha='center', color='blue')
 
 # Customize the plot
 plt.xlabel("X-axis")
