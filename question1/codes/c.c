@@ -37,7 +37,7 @@ int main(){
         return 0;
     }
 point_gen(fptr, A, C, 2, 1, 15);
-point_gen(fptr, C, B, 2, 1, 15);
+point_gen(fptr, C, B, 2, 1, 20);
 
 
     // Free allocated memory
