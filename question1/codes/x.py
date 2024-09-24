@@ -36,7 +36,7 @@ plt.legend()
 plt.axis('equal')
 
 # Save the plot to a file
-plt.savefig("plot.png")  # Save as PNG file (you can change the filename and format)
+plt.savefig('/home/suraj5323/matgeoee11033/question1/figs/Figure_1.png')  # Save as PNG file (you can change the filename and format)
 
 # Close the plot
 plt.close()
