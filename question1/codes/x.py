@@ -12,8 +12,8 @@ y_values = points[:, 1]
 A = np.array([-4, 6])  # Point A
 B = np.array([-4, -6]) # Point B
 
-# Create a figure
-plt.figure()
+# Create a larger figure
+plt.figure(figsize=(12, 8))  # Adjust the width and height as needed
 
 # Plot the points from values.dat as a continuous line
 plt.plot(x_values, y_values, 'r-', label='Points from values.dat')  # 'r-' for red line
@@ -29,14 +29,15 @@ plt.title("Points from values.dat")
 plt.axhline(0, color='black', linewidth=0.5, ls='--')
 plt.axvline(0, color='black', linewidth=0.5, ls='--')
 
-# Set wider axis limits for zooming out
-plt.xlim(-10, 10)  # Wider x-axis limits
-plt.ylim(-10, 10)  # Wider y-axis limits
+
 
 plt.grid()
 plt.legend()
 plt.axis('equal')
 
-# Show the plot
-plt.show()
+# Save the plot to a file
+plt.savefig("plot.png")  # Save as PNG file (you can change the filename and format)
+
+# Close the plot
+plt.close()
 
