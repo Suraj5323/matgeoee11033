@@ -49,7 +49,7 @@
 % \bigskip
 {\let\newpage\relax\maketitle}
 \textbf{Question}:\\
-The centre of circle is $\myvec{2a\\a-7}$. Find the values of a if the circle passes through the point $\vec{A}\myvec{11\\-9}$and has diameter $10\sqrt{2}$ units 
+The centre of circle is $\myvec{2a\\a-7}$. Find the values of $a$ if the circle passes through the point $\vec{A}\myvec{11\\-9}$and has diameter $10\sqrt{2}$ units 
 \\
 \solution \\
 \begin{table}[!ht]
@@ -59,18 +59,33 @@ The centre of circle is $\myvec{2a\\a-7}$. Find the values of a if the circle pa
 \end{table}\\
 The radius of circle is $\frac{diameter}{2}$
 \begin{align}
-    \implies radius=5\sqrt{2}\\
-    \norm{\vec{A}-\vec{C}} &= 5\sqrt{2}\\
-    \vec{A}-\vec{C} &= \myvec{11-2a \\ -2-a}\\
-    \brak{11-2a}^2 +\brak{2+a}^2 &= 50\\
-    a^2-8a+15 &= 0\\
-    \brak{a-3}\brak{a-5}&=0\\
-	\therefore  a =3 \text{ or } a = 5
+    \implies radius=5\sqrt{2}
+    \end{align}
+     The equation of a circle is given by 
+	
+\begin{align}
+	\norm{\vec{x}}^2 + 2 \vec{u}^{\top}\vec{x} + f = 0
 \end{align}
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=\linewidth]{figs/Figure_1.png}
-    \caption{}
+for
+		\begin{align}
+	 \vec{u}=-\vec{c}, f = \norm{\vec{c}}^2-r^2
+		\end{align}
+  Now,
+  \begin{align}
+      \vec{u}=-\myvec{2a\\a-7},f=5a^2-14a-1
+  \end{align}
+  On substituting $x$=$\myvec{11\\-9}$
+  \begin{align}
+  202-26a-126+5a^2-14a-1=0\\
+  5a^2-40a+75=0\\
+  a^2-8a+15=0\\
+  a=3,a=5
+  \end{align}
+  \begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.7\linewidth]{figs/Figure_1.png}
+   
+   \label{stemplot}
 \end{figure}
 
 \end{document}
