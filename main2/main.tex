@@ -1,0 +1,470 @@
+\let\negmpace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+% Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{document}
+\bibliographystyle{IEEEtran}
+\title{2008-ME}
+\author{EE24BTECH11033 - KOLLURU SURAJ}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item A thermal power plant operates on a regenerative cycle witha single open feedwater heater, as shown in the figure. For the state points shown, the specific enthalpies are $h_1$=2800 kJ/kg and $h_2$=200 kJ/kg. The bleed to the feedwater heater is 20\% of the boiler steam generation rate. The specific enthalpy at state 3 is
+
+    \begin{figure}[!ht]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (3.75,10.75) rectangle (5.25,9.75);
+\draw [->, >=Stealth] (5.25,10.25) -- (6.25,10.25);
+\draw  (6.25,10.75) rectangle (8,9.75);
+\draw [line width=0.7pt, ->, >=Stealth] (8,10.25) -- (12.75,10.25);
+\draw [line width=0.7pt, short] (12.75,10.25) -- (12.75,9.75);
+\draw [ line width=0.7pt ] (12.75,9) circle (0.75cm);
+\draw [line width=0.7pt, ->, >=Stealth] (12.75,8.25) -- (12.75,7.75);
+\draw [line width=0.7pt, ->, >=Stealth] (12.75,7.75) -- (11.5,7.75);
+
+
+\draw  (11,7.75) circle (0.5cm);
+\draw [short] (11.25,8.25) -- (11.25,7.25);
+\draw [short] (10.5,7.75) -- (11.25,8.25);
+\draw [short] (10.5,7.75) -- (11.25,7.25);
+\draw [->, >=Stealth] (10.5,7.75) -- (8,7.75);
+\draw  (6.5,8) rectangle (8,7);
+\draw [->, >=Stealth] (6.5,7.5) -- (4.75,7.5);
+\draw [->, >=Stealth] (4.75,7.5) -- (0.75,7.5);
+\draw [->, >=Stealth] (0.75,7.5) -- (0.75,8.5);
+\draw (0.75,8.5) to[short] (1.25,8.5);
+\draw  (1.75,8.5) circle (0.5cm);
+\draw [short] (1.5,9) -- (1.5,8);
+\draw [short] (1.5,9) -- (2.25,8.5);
+\draw [short] (1.5,8) -- (2.25,8.5);
+\draw [short] (2.25,8.5) -- (2.75,8.5);
+\draw [->, >=Stealth] (2.75,8.5) -- (2.75,10.25);
+\draw [->, >=Stealth] (2.75,10.25) -- (3.75,10.25);
+\node [font=\normalsize] at (4.5,10.25) {\textbf{Boiler}};
+\node [font=\normalsize] at (7,10.25) {\textbf{Turbine}};
+\node [font=\normalsize] at (10.75,9) {\textbf{Condenser}};
+\node [font=\normalsize] at (11,7) {\textbf{Condensate}};
+\node [font=\normalsize] at (11,6.75) {\textbf{extraction}};
+\node [font=\normalsize] at (10.75,6.5) {\textbf{pump}};
+\node [font=\normalsize] at (7.25,6.75) {\textbf{Open feedwater}};
+\node [font=\normalsize] at (7.25,6.5) {\textbf{heater}};
+\draw [->, >=Stealth] (7,9.75) -- (7,8);
+\node [font=\normalsize] at (1,9.75) {\textbf{Boiler}};
+\node [font=\normalsize] at (1.25,9.5) {\textbf{feed pump}};
+\draw [short] (5.75,7.5) -- (5.5,7.5);
+\draw [short] (5.5,7.5) -- (5.5,8);
+\draw  (5.5,8.5) circle (0.5cm);
+\node [font=\Large] at (5.5,8.5) {\textbf{3}};
+\draw [short] (7,9) -- (7.25,9);
+\draw  (7.75,9) circle (0.5cm);
+\node [font=\LARGE] at (7.75,9) {\textbf{1}};
+\draw [short] (9,8.25) -- (9,7.75);
+\draw  (9,8.75) circle (0.5cm);
+\node [font=\LARGE] at (9,8.75) {\textbf{2}};
+\end{circuitikz}
+}%
+
+
+\end{figure}
+
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 720 kJ/kg
+    \item 2280 kJ/kg
+    \item 1500 kJ/kg
+    \item 3000 kJ/kg
+    \end{multicols}
+\end{enumerate}
+ 
+ \item Moist air at a pressure of 100 kPa is compressed to 500 kPa and then cooled to 35$^\circ$C in an aftercooler. The air at the entry to the aftercooler is unsaturated and becomes just saturated at the exit of the aftercooler. The saturation pressure of water at 35$^\circ$C is 5.628 kPa. The partial pressure of water vapour (in kPa) in the moist air entering the compressor is closest to:
+
+\begin{enumerate}
+    \begin{multicols}{4}
+
+    \item 0.57
+    \item 1.13
+    \item 2.26
+    \item 4.52
+    \end{multicols}
+\end{enumerate}
+\item A hollow enclosure is formed between two infinitely long concentric cylinders of radii 1 m and 2 m, respectively. Radiative heat exchange takes place between the inner surface of the larger cylinder (surface-2) and the outer surface of the smaller cylinder (surface-1). The radiating surfaces are diffuse and the medium in the enclosure is non-participating. The fraction of the thermal radiation leaving the larger surface and striking itself is:
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw  (6.25,9.25) circle (1.25cm);
+\draw  (6.25,9.25) circle (2.5cm);
+\draw [->, >=Stealth] (10,11.75) -- (7.25,10);
+\draw (9.5,6) to[short] (7.5,8);
+\draw [->, >=Stealth] (7.5,8) -- (8.75,8.75);
+\node [font=\Large] at (10,12) {Surface-1};
+\node [font=\Large] at (9.75,5.75) {Surface-2};
+\end{circuitikz}
+}%
+
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0.25
+    \item 0.5
+    \item 0.75
+    \item 1
+    \end{multicols}
+\end{enumerate} 
+\item Air (at atmospheric pressure) at a dry bulb temperature of $40^\circ \text{C}$ and wet bulb temperature of $20^\circ \text{C}$ is humidified in an air washer operating with continuous water recirculation. The wet bulb depression (i.e., the difference between the dry and wet bulb temperatures) at the exit is 25\% of that at the inlet. The dry bulb temperature at the exit of the air washer is closest to
+
+\begin{enumerate}
+   \begin{multicols}{4}
+    \item $10^\circ \text{C}$
+    \item $20^\circ \text{C}$
+    \item $25^\circ \text{C}$
+    \item $30^\circ \text{C}$
+    \end{multicols}
+\end{enumerate}
+\item Steady two-dimensional heat conduction takes place in the body shown in the figure below. The normal temperature gradients over surfaces P and Q can be considered to be uniform. The temperature gradient $\frac{\partial T}{\partial x}$ at surface Q is equal to $10 \ \text{K/m}$. Surfaces P and Q are maintained at constant temperatures as shown in the figure, while the remaining part of the boundary is insulated. The body has a constant thermal conductivity of $0.1 \ \text{W/m.K}$. The values of $\frac{\partial T}{\partial x}$ and $\frac{\partial T}{\partial y}$ at surface P are
+
+
+
+
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [->, >=Stealth] (3.75,6) -- (3.75,10.75);
+\draw [->, >=Stealth] (3.75,5.5) -- (9.75,5.5);
+\node [font=\Large] at (10,5.5) {$X$};
+\node [font=\Large] at (3.5,11) {$y$};
+\draw [short] (4.5,7.5) -- (4.75,8.25);
+\draw [short] (4.75,8.25) -- (4.75,9);
+\draw [short] (4.75,9) -- (5,9.25);
+\draw [short] (5,9.25) -- (5.75,9.5);
+\draw [short] (4.5,7.5) -- (5.25,7.25);
+\draw [short] (5.25,7.25) -- (5.75,6.75);
+\draw [short] (5.75,6.75) -- (6.75,6.75);
+\draw [short] (6.75,6.75) -- (7.25,7);
+\draw [short] (7.25,7) -- (7.5,7.5);
+\draw [short] (7.5,7.5) -- (7.75,7.75);
+\draw [short] (7.75,7.75) -- (7.75,8.75);
+\draw [short] (5.75,9.5) -- (6,10);
+\draw [short] (6,10) -- (6.75,10);
+\draw [short] (6.75,10) -- (7.25,9.75);
+\draw [short] (7.25,9.75) -- (7.5,9.5);
+\draw [short] (7.5,9.5) -- (7.75,8.75);
+\draw [short] (7.75,8.75) -- (7.75,7.75);
+\draw [short] (5.75,6.75) -- (6.75,6.75);
+\draw [line width=1.2pt, short] (7.75,8.75) -- (7.75,7.75);
+\draw [line width=1.2pt, short] (5.75,6.75) -- (6.75,6.75);
+\draw [line width=0.2pt, <->, >=Stealth] (7.5,8.75) -- (7.5,7.75);
+\draw [line width=0.2pt, short] (7.25,8.75) -- (7.75,8.75);
+\draw [line width=0.2pt, short] (7.25,7.75) -- (7.75,7.75);
+\draw [line width=0.2pt, short] (7.75,8.25) -- (8.25,8.25);
+\draw [line width=0.2pt, short] (8.25,8.25) -- (8.75,9);
+\node [font=\large] at (10,9.25) {$\text{Surface Q, } 0^\circ C$};
+\draw [line width=0.2pt, <->, >=Stealth] (5.75,7) -- (6.75,7);
+\draw [line width=0.2pt, short] (6.75,7.25) -- (6.75,6.75);
+\draw [line width=0.2pt, short] (5.75,7.25) -- (5.75,6.75);
+\node [font=\large] at (7,8.25) {\textbf{2 m}};
+\node [font=\large] at (6.25,7.25) {\textbf{1 m}};
+\draw [line width=0.2pt, ->, >=Stealth] (6.25,6.5) -- (6.25,6.75);
+\draw [line width=0.2pt, short] (6.25,6.5) -- (7.75,6);
+\draw [line width=0.2pt, short] (3.75,6) -- (3.75,5.5);
+\node [font=\large] at (9.5,6.25) {$\text{Surface P, } 100^\circ C$};
+\end{circuitikz}
+}%
+
+
+\end{figure}
+
+
+
+\begin{enumerate}
+     
+\begin{multicols}{2}
+    \item $\frac{\partial T}{\partial x} = 20 \ \text{K/m}, \quad \frac{\partial T}{\partial y} = 0 \ \text{K/m}$
+    \item $\frac{\partial T}{\partial x} = 0 \ \text{K/m}, \quad \frac{\partial T}{\partial y} = 10 \ \text{K/m}$
+    \item $\frac{\partial T}{\partial x} = 10 \ \text{K/m}, \quad \frac{\partial T}{\partial y} = 10 \ \text{K/m}$
+    \item $\frac{\partial T}{\partial x} = 0 \ \text{K/m}, \quad \frac{\partial T}{\partial y} = 20 \ \text{K/m}$
+\end{multicols}
+\end{enumerate}
+\item In a steady state steady flow process taking place in a device with a single inlet and a single outlet, the work done per unit mass flow rate is given by $w = - \int_{\text{inlet}}^{\text{outlet}} v \, dp$, where $ v $ is the specific volume and $ p $ is the pressure. The expression for $ w $ given above
+
+\begin{enumerate}
+ 
+    \item is valid only if the process is both reversible and adiabatic
+    \item is valid only if the process is both reversible and isothermal
+    \item is valid for any reversible process
+    \item is incorrect; it must be $w=\int_{\text{inlet}}^{\text{outlet}} p \, dv $
+\end{enumerate}
+\item For the standard transportation linear programme with $m$ sources and $n$ destinations and total supply equaling total demand, an optimal solution (lowest cost) with the smallest number of non-zero $x_{ij}$ values (amounts from source $i$ to destination $j$) is desired. The best upper bound for this number is
+
+\begin{enumerate}
+    \item $mn$
+    \item $2(m + n)$
+    \item $m + n$
+    \item $m + n - 1$
+\end{enumerate}
+\item A moving average system is used for forecasting weekly demand. $F_1(t)$ and $F_2(t)$ are sequences of forecasts with parameters $m_1$ and $m_2$, respectively, where $m_1$ and $m_2$ ($m_1 > m_2$) denote the numbers of weeks over which the moving averages are taken. The actual demand shows a step increase from $d_1$ to $d_2$ at a certain time. Subsequently,
+
+\begin{enumerate}
+    \item neither $F_1(t)$ nor $F_2(t)$ will catch up with the value $d_2$
+    \item both sequences $F_1(t)$ and $F_2(t)$ will reach $d_2$ in the same period
+    \item $F_1(t)$ will attain the value $d_2$ before $F_2(t)$
+    \item $F_2(t)$ will attain the value $d_2$ before $F_1(t)$
+\end{enumerate}
+\item For the network below, the objective is to find the length of the shortest path from node $P$ to node $G$. Let $d_{ij}$ be the length of directed arc from node $i$ to node $j$.
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [line width=0.6pt, ->, >=Stealth] (8.75,9.25) -- (10.75,9.25);
+\draw [line width=0.6pt, ->, >=Stealth] (6.75,8) -- (8.25,6.75);
+\draw [line width=0.6pt, ->, >=Stealth] (8.5,6.75) -- (10.75,6.75);
+\draw [line width=0.6pt, ->, >=Stealth] (10.75,6.75) -- (13.25,6.75);
+\draw [line width=0.6pt, ->, >=Stealth] (10.75,9.25) -- (13.25,9.25);
+\draw [line width=0.6pt, ->, >=Stealth] (13.25,9.25) -- (14.75,8);
+\draw [line width=0.6pt, ->, >=Stealth] (13.25,6.75) -- (14.75,8);
+\draw [line width=0.6pt, ->, >=Stealth] (10.75,9.25) -- (13.25,6.75);
+\draw [line width=0.6pt, ->, >=Stealth] (6.75,8) -- (8.75,9.25);
+\draw [line width=0.6pt, ->, >=Stealth] (8.75,9.25) -- (10.75,6.75);
+\draw [ line width=2pt ] (6.75,8) circle (0.25cm);
+\draw [ line width=2pt ] (8.75,9.25) circle (0.25cm);
+\draw [ line width=2pt ] (10.75,9.25) circle (0.25cm);
+\draw [ line width=2pt ] (10.75,6.75) circle (0.25cm);
+\draw [ line width=2pt ] (8.25,6.75) circle (0.25cm);
+\draw [ line width=2pt ] (13.25,6.75) circle (0.25cm);
+\draw [ line width=2pt ] (13.25,9.25) circle (0.25cm);
+\draw [ line width=2pt ] (14.75,8) circle (0.25cm);
+\node [font=\LARGE] at (6,8) {\textbf{P}};
+\node [font=\LARGE] at (13.75,9.75) {\textbf{Q}};
+\node [font=\LARGE] at (15.5,8) {\textbf{G}};
+\node [font=\LARGE] at (13.75,6.25) {\textbf{R}};
+\end{circuitikz}
+}%
+
+
+\end{figure}
+
+Let $s_j$ be the length of the shortest path from $P$ to node $j$. Which of the following equations can be used to find $s_G$?
+
+\begin{enumerate}
+    \item $s_G = \text{Min}\{s_Q, s_R\}$
+    \item $s_G = \text{Min}\{s_Q - d_{QG}, s_R - d_{RG}\}$
+    \item $s_G = \text{Min}\{s_Q + d_{QG}, s_R + d_{RG}\}$
+    \item $s_G = \text{Min}\{d_{QG}, d_{RG}\}$
+\end{enumerate}
+\item The product structure of an assembly P is shown in figure 
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw  (7,12.25) rectangle (8.5,11);
+\draw [line width=0.6pt, short] (7.75,11) -- (7.75,10.25);
+\draw [line width=0.6pt, short] (7.75,10.25) -- (5.25,10.25);
+\draw [line width=0.6pt, short] (7.75,10.25) -- (10.75,10.25);
+\draw [line width=0.6pt, short] (10.75,10.25) -- (10.75,9.25);
+\draw [line width=0.6pt, short] (5.25,10.25) -- (5.25,9.25);
+\draw [ line width=0.6pt ] (10.75,8.75) rectangle (10.75,8.75);
+\draw [ line width=0.6pt ] (10,9.25) rectangle (11.5,8);
+\draw [ line width=0.6pt ] (4.5,9.25) rectangle (6,8);
+\draw [line width=0.6pt, short] (5.25,8) -- (5.25,7.25);
+\draw [line width=0.6pt, short] (5.25,7.25) -- (7.5,7.25);
+\draw [line width=0.6pt, short] (5.25,7.25) -- (3.5,7.25);
+\draw [line width=0.6pt, short] (7.5,7.25) -- (7.5,6.75);
+\draw [line width=0.6pt, short] (3.5,7.25) -- (3.5,6.75);
+\draw [ line width=0.6pt ] (7,6.75) rectangle (8.5,5.5);
+\draw [ line width=0.6pt ] (2.75,6.75) rectangle (4.25,5.5);
+\node [font=\LARGE] at (7.75,11.75) {\textbf{P}};
+\node [font=\LARGE] at (5.25,8.5) {\textbf{Q}};
+\node [font=\LARGE] at (10.75,8.5) {\textbf{R}};
+\node [font=\LARGE] at (3.5,6) {\textbf{S}};
+\node [font=\LARGE] at (7.75,6) {\textbf{R}};
+\node [font=\large] at (3.25,8.75) {\textbf{Assembly}};
+\node [font=\large] at (1.75,7) {\textbf{Sub-assembly}};
+\end{circuitikz}
+}%
+
+
+\end{figure}
+
+Estimated demand for end product P is as follows: 
+
+\begin{table}[!ht]
+  \centering
+  \input{tables/table.tex}
+
+\end{table}
+
+Ignore lead times for assembly and sub-assembly. Production capacity(per week)
+for component R is the bottleneck operation. Starting with zero inventory, the smallest capacity that will ensure a feasible production plan up to week 6 is
+\begin{enumerate}
+\begin{multicols}{4}
+    
+
+    \item 1000
+    \item 1200
+    \item 2200
+    \item 2400
+    \end{multicols}
+\end{enumerate}
+\item One tooth of a gear having 4 module and 32 teeth is shown in figure. Assume that the gear tooth and the corresponding tooth space make equal intercepts on the pitch circumference. The dimensions $'a'$ and $'b'$ respectively, are closest to
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [line width=0.6pt, short] (6.25,10.25) -- (6.25,7);
+\draw [line width=0.6pt, short] (6.25,7) -- (5,6.75);
+\draw [line width=0.6pt, short] (8.5,10.25) -- (8.5,7);
+\draw [line width=0.6pt, short] (8.5,7) -- (9.5,6.75);
+\draw [line width=0.6pt, short] (6.25,8.5) -- (6.5,9);
+\draw [line width=0.6pt, short] (6.5,9) -- (7,9.5);
+\draw [line width=0.6pt, short] (7,9.5) -- (7.75,9.5);
+\draw [line width=0.6pt, short] (7.75,9.5) -- (8.25,9);
+\draw [line width=0.6pt, short] (8.25,9) -- (8.5,8.5);
+\draw [line width=0.6pt, dashed] (6.25,8.5) -- (7.25,8.75);
+\draw [line width=0.6pt, dashed] (7.25,8.75) -- (8.5,8.5);
+\draw [line width=0.6pt, dashed] (8.5,8.5) -- (9.75,8);
+\draw [line width=0.6pt, dashed] (6.25,8.5) -- (4.5,7.75);
+\draw [line width=0.6pt, short] (7.75,9.5) -- (10,9.5);
+\draw [line width=0.6pt, short] (6.25,8.5) -- (10,8.5);
+\draw [line width=0.6pt, <->, >=Stealth] (9.25,9.5) -- (9.25,8.5);
+\draw [line width=0.6pt, <->, >=Stealth] (6.25,9.75) -- (8.5,9.75);
+\node [font=\large] at (7.25,10) {\textbf{a}};
+\node [font=\large] at (9.5,9) {\textbf{b}};
+\draw [line width=0.6pt, ->, >=Stealth] (3.25,8.75) -- (5,8);
+\node [font=\large] at (2.5,9) {\textbf{Pitch circle}};
+\end{circuitikz}
+}%
+
+
+\end{figure}
+
+\begin{enumerate}
+\begin{multicols}{2}
+    \item 6.08 mm, 4 mm
+    \item 6.48 mm, 4.2 mm
+    \item 6.28 mm, 4.3 mm
+    \item 6.28 mm, 4.1 mm
+\end{multicols}
+    
+\end{enumerate}
+\item While cooling, a cubical casting of side 40 mm undergoes 3\%, 4\% and 5\% volume shirnkage during the liquid state, phase transition and solid state, respectively. The volume of the metal compensated from the riser is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item  2\%
+    \item  7\%
+    \item  8\%
+    \item  9\% 
+\end{multicols}
+   
+\end{enumerate}
+\item In a single point turning tool, the side rake angle and orthogonal rake angle are equal. $\varphi$ is the principal cutting edge angle and its range is $0^{\circ}\leq\varphi\leq90^{\circ}$. The chip follows in the orthogonal plane. The value of $\varphi$ is closest to
+\begin{enumerate}
+\begin{multicols}{4}
+\item $0^{\circ}$
+\item $45^{\circ}$
+\item $60^{\circ}$
+\item $90^{\circ}$
+\end{multicols}
+   
+\end{enumerate}
+\item A researcher conducts electrochemical machining (ECM) on a binary alloy\brak{\text{density } 6000 \, \text{kg/m}^3} of iron \brak{\text{atomic weight 56, valency 2}} and metal P \brak{\text{atomic weight 24, valency 4}}. Faraday's constant = 96500 \, \text{coulomb/mole}. Volumetric material removal rate of the alloy is 50 \, $\text{mm}^3$/\text{s} at a current of 2000 \, \text{A}. The percentage of the metal P in the alloy is closest to
+
+\begin{enumerate}
+\begin{multicols}{4}
+    
+
+    \item 40
+    \item 25
+    \item 15
+    \item 79
+    \end{multicols}
+\end{enumerate}
+\item In a single pass rolling oparation, a 20 mm thick plate with plate width of 100 mm, is reduced to 18 mm. The roller radius is 250 mm and rotational speed is 10 rpm. The average flow stress for the plate material is 300 MPa. The power required for the rolling  operation in kW is closest to 
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 15.2
+    \item 18.2
+    \item 30.4
+    \item 45.6
+\end{multicols}
+    
+
+  
+\end{enumerate}
+
+\item In arc welding of a butt joint, the welding speed is to be selected such that highest cooling rate is achieved. Melting efficiency and the heat transfer efficiency are 0.5 and 0.7, respectively. The area of the weld cross section is 5 $mm^2$ and the unit energy required to melt the metal is 10J/$mm^3$. If the welding power is 2KW, the welding speed in mm/s is closest to 
+\begin{enumerate}
+    \begin{multicols}{4}
+            \item 4
+                \item 14
+                    \item 24
+                        \item 34
+    \end{multicols}
+
+\end{enumerate}
+\item In the deep drawing of cups, blanks show a tendency to wrinkle up around the periphery (flange). The most likely cause and remedy of the phenomenon are, respectively,
+
+\begin{enumerate}
+    \item Buckling due to circumferential compression; Increase blank holder pressure
+    \item High blank holder pressure and high friction; Reduce blank holder pressure and apply lubricant
+    \item High temperature causing increase in circumferential length; Apply coolant to blank
+    \item Buckling due to circumferential compression; decrease blank holder pressure
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
