@@ -1,0 +1,58 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (3.75,10.75) rectangle (5.25,9.75);
+\draw [->, >=Stealth] (5.25,10.25) -- (6.25,10.25);
+\draw  (6.25,10.75) rectangle (8,9.75);
+\draw [line width=0.7pt, ->, >=Stealth] (8,10.25) -- (12.75,10.25);
+\draw [line width=0.7pt, short] (12.75,10.25) -- (12.75,9.75);
+\draw [ line width=0.7pt ] (12.75,9) circle (0.75cm);
+\draw [line width=0.7pt, ->, >=Stealth] (12.75,8.25) -- (12.75,7.75);
+\draw [line width=0.7pt, ->, >=Stealth] (12.75,7.75) -- (11.5,7.75);
+
+
+\draw  (11,7.75) circle (0.5cm);
+\draw [short] (11.25,8.25) -- (11.25,7.25);
+\draw [short] (10.5,7.75) -- (11.25,8.25);
+\draw [short] (10.5,7.75) -- (11.25,7.25);
+\draw [->, >=Stealth] (10.5,7.75) -- (8,7.75);
+\draw  (6.5,8) rectangle (8,7);
+\draw [->, >=Stealth] (6.5,7.5) -- (4.75,7.5);
+\draw [->, >=Stealth] (4.75,7.5) -- (0.75,7.5);
+\draw [->, >=Stealth] (0.75,7.5) -- (0.75,8.5);
+\draw (0.75,8.5) to[short] (1.25,8.5);
+\draw  (1.75,8.5) circle (0.5cm);
+\draw [short] (1.5,9) -- (1.5,8);
+\draw [short] (1.5,9) -- (2.25,8.5);
+\draw [short] (1.5,8) -- (2.25,8.5);
+\draw [short] (2.25,8.5) -- (2.75,8.5);
+\draw [->, >=Stealth] (2.75,8.5) -- (2.75,10.25);
+\draw [->, >=Stealth] (2.75,10.25) -- (3.75,10.25);
+\node [font=\normalsize] at (4.5,10.25) {\textbf{Boiler}};
+\node [font=\normalsize] at (7,10.25) {\textbf{Turbine}};
+\node [font=\normalsize] at (10.75,9) {\textbf{Condenser}};
+\node [font=\normalsize] at (11,7) {\textbf{Condensate}};
+\node [font=\normalsize] at (11,6.75) {\textbf{extraction}};
+\node [font=\normalsize] at (10.75,6.5) {\textbf{pump}};
+\node [font=\normalsize] at (7.25,6.75) {\textbf{Open feedwater}};
+\node [font=\normalsize] at (7.25,6.5) {\textbf{heater}};
+\draw [->, >=Stealth] (7,9.75) -- (7,8);
+\node [font=\normalsize] at (1,9.75) {\textbf{Boiler}};
+\node [font=\normalsize] at (1.25,9.5) {\textbf{feed pump}};
+\draw [short] (5.75,7.5) -- (5.5,7.5);
+\draw [short] (5.5,7.5) -- (5.5,8);
+\draw  (5.5,8.5) circle (0.5cm);
+\node [font=\Large] at (5.5,8.5) {\textbf{3}};
+\draw [short] (7,9) -- (7.25,9);
+\draw  (7.75,9) circle (0.5cm);
+\node [font=\LARGE] at (7.75,9) {\textbf{1}};
+\draw [short] (9,8.25) -- (9,7.75);
+\draw  (9,8.75) circle (0.5cm);
+\node [font=\LARGE] at (9,8.75) {\textbf{2}};
+\end{circuitikz}
+}%
+
+
+\end{figure}
