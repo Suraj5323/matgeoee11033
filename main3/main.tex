@@ -1,0 +1,182 @@
+\let\negmpace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+% Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{document}
+\bibliographystyle{IEEEtran}
+\title{XE-2013}
+\author{EE24BTECH11033 - KOLLURU SURAJ}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\textbf{Common Data for Questions 1 and 2:}
+
+The wave and eddy resistance of a sea-going vessel, 96 $m$ in length, driven at a velocity of 12 $m/s$, is to be determined. For this purpose, a 1/16 th scale model is employed in fresh water and the coefficient of resistance $C_{we}$ of the model is found to be $1.47\times10^{-4}$. The quantity $C_{we}$ is defined as $F_{we}/(\rho V^2 L^2 / 2)$, where $F_{we}$ is the wave and eddy resistance, $\rho$ is the density, $V$ is the velocity and $L$ is the characteristic length. The density of sea water is 1026 $kg/m^3$.
+\hfill(XE-2013)
+
+\begin{enumerate}
+    \item The velocity in $m/s$, at which the model is towed, is
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item 0.75
+            \item 1.33
+            \item 3
+            \item 192
+        \end{enumerate}
+    \end{multicols}
+
+    \item The resistance of the prototype, in $kN$, is
+    \begin{multicols}{4}
+        \begin{enumerate}[label=(\Alph*)]
+            \item 6
+            \item 25
+            \item 26.9
+            \item 100.1
+        \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+
+\textbf{Statement for Linked Answer Questions 3 and 4:}
+
+Water enters a symmetric forked pipe and discharges into atmosphere through the two branches as shown in the Figure. The cross-sectional area of section-1 is 0.2 $m^2$ and the velocity across section-1 is 3 $m/s$. The density of water may be taken as 1000 $kg/m^3$. The viscous effects and elevation changes may be neglected.\hfill(XE-2013)
+
+
+\input{figs/fig}
+
+
+\begin{enumerate}
+    \item The gauge pressure at section-1, in $kPa$, is 
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item 0.6
+            \item 13.5
+            \item 135
+            \item 600
+        \end{enumerate}
+    \end{multicols}
+
+    \item The magnitude of the force, in $kN$, required to hold the pipe in place,  
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item 2.7
+            \item 5.4
+            \item 19
+            \item 27
+        \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+
+
+
+\begin{enumerate}
+    
+
+\item As temperature increases, diffusivity of an atom in a solid material,\hfill(XE-2013)
+\begin{enumerate}
+    \item increases
+    \item decreases
+    \item remains constant
+    \item depends on the specific material
+\end{enumerate}
+\item Which of the following is NOT correct?\hfill(XE-2013)
+\begin{enumerate}
+    \item Dislocations are thermodynamically unstable defects.
+    \item Dislocations can move inside a crystal under the action of an applied stress.
+    \item crew dislocations can change the slip plane without climb
+    \item Burger's vector of an edge dislocation is parallel to the dislocation line.
+    
+\end{enumerate}
+\item At a constant atmospheric pressure, the number of phases, P which coexist in a chosen system at equilibrium, is related to the number of components, C in the system and the degree of freedom, F
+by\hfill(XE-2013)
+\begin{enumerate}
+    \item P+F=C-2
+    \item P+F=C+2
+    \item P+F=C+1
+    \item P+F=C-1
+\end{enumerate}
+\item Which one of the following metals is commonly alloyed with iron to improve its corrosion resistance?\hfill(XE-2013)
+\begin{enumerate}
+    \item Co
+    \item Cr
+    \item Ti
+    \item Nb
+    
+\end{enumerate}
+\item The number of slip systems in a metal with FCC crystal structure is\hfill(XE-2013)
+\begin{enumerate}
+    \item 4
+    \item 6
+    \item 8
+    \item 12
+\end{enumerate}
+\item Upon recrystallization of a cold worked metal,\hfill(XE-2013)
+\begin{enumerate}
+    \item strength increases and ductility decreases
+    \item strength decreases but ductility increases
+    \item both strength and ductility increase
+    \item both strength and ductility decrease
+\end{enumerate}
+\item In carbon fiber reinforced resin composites, for a given fiber volume content, Young's modulus depends on the orientation of the fiber with respect to the applied load. Which orientation of the fibers will give the maximum value of Young's modulus?\hfill(XE-2013)
+\begin{enumerate}
+    \item transverse 
+    \item longitudinal
+    \item random 
+    \item both transverse and longitudinal
+\end{enumerate}
+\item Vulcanization is related to\hfill(XE-2013)
+\begin{enumerate}
+    \item strengthening of rubber 
+    \item extrusion
+    \item injection moulding 
+    \item addition polymerisation
+\end{enumerate}
+\item Which one of the following oxides crystallizes into fluorite structure?\hfill(XE-2013)
+\begin{enumerate}
+    \item $UO_2$
+    \item MgO
+    \item BaTi$O_3$
+    \item $MgAl_2O_4$
+\end{enumerate}
+\end{enumerate}
+\end{document}
