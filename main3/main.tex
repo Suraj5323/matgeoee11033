@@ -85,7 +85,41 @@ where $F_{we}$ is the wave and eddy resistance, $\rho$ is the density, $V$ is th
 \textbf{Statement for Linked Answer Questions \ref{47} and \ref{48} }\\
 Water enters a symmetric forked pipe and discharges into the atmosphere through the two branches as shown in the figure. The cross-sectional area of section-1 is 0.2 $m^2$, and the velocity across section-1 is 3 $m/s$. The density of water may be taken as 1000 $kg/m^3$. The viscous effects and elevation changes may be neglected. 
 
-\input{figs/fig}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [line width=1pt, short] (3.25,9.75) -- (8.75,9.75);
+\draw [line width=1pt, short] (8.75,9.75) -- (11.5,13.25);
+\draw [line width=1pt, short] (3.25,7.75) -- (8.75,7.75);
+\draw [line width=1pt, short] (8.75,7.75) -- (11.75,5);
+\draw [line width=1pt, short] (9,9.25) -- (9,8.25);
+\draw [line width=1pt, dashed] (9,8.75) -- (14,8.75);
+\draw [line width=1pt, short] (9,9.25) -- (12,13);
+\draw [line width=1pt, short] (9,8.25) -- (12,5.5);
+\draw [line width=1pt, dashed] (11.5,4.75) -- (12.5,5.75);
+\draw [line width=1pt, dashed] (11.25,13.5) -- (12.5,12.5);
+\draw [line width=1pt, dashed] (3.5,10.25) -- (3.5,7.25);
+\draw [line width=0.7pt, ->, >=Stealth] (2.5,8.75) -- (4.75,8.75);
+\draw [line width=0.7pt, ->, >=Stealth] (11.5,12.75) -- (12.25,13.75);
+\draw [line width=0.7pt, ->, >=Stealth] (11.5,5.75) -- (12.5,4.75);
+\draw [line width=0.3pt, short] (9.25,9.5) -- (9.5,9.25);
+\draw [line width=0.3pt, short] (9.5,9.25) -- (9.5,8.75);
+\draw [line width=0.3pt, short] (9.5,8.75) -- (9.5,8.25);
+\draw [line width=0.3pt, short] (9.5,8.25) -- (9.25,8);
+\node [font=\LARGE] at (10,9.5) {\textbf{$60^\circ$}};
+\node [font=\LARGE] at (10,8) {\textbf{$60^\circ$}};
+\node [font=\LARGE] at (3.75,10.25) {\textbf{1}};
+\node [font=\LARGE] at (11,13.25) {\textbf{2}};
+\node [font=\LARGE] at (11,5) {\textbf{3}};
+\node [font=\LARGE] at (13.25,13) {\textbf{$A_2 = A_1/4$}};
+\node [font=\LARGE] at (13.5,4.25) {\textbf{$A_3 = A_1/4$}};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
 
 \begin{enumerate}
     \setcounter{enumi}{2} % Continue enumeration from question 3
@@ -160,7 +194,8 @@ by\hfill(XE-2013)
     \item both strength and ductility increase
     \item both strength and ductility decrease
 \end{enumerate}
-\item In carbon fiber reinforced resin composites, for a given fiber volume content, Young's modulus depends on the orientation of the fiber with respect to the applied load. Which orientation of the fibers will give the maximum value of Young's modulus?\hfill(XE-2013)
+\item In carbon fiber reinforced resin composites, for a given fiber volume content, the Young's modulus varies depending on the orientation of the fibers relative to the direction of the applied load. Which fiber orientation will yield the maximum possible Young's modulus in this composite material?
+\hfill(XE-2013)
 \begin{enumerate}
     \item transverse 
     \item longitudinal
