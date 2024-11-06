@@ -1,0 +1,6 @@
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+# Adjust layout and save the plot
+plt.tight_layout()
+plt.savefig('../figs/Figure_1.png')
+\end{lstlisting}
